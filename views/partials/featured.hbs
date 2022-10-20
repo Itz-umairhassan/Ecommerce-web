@@ -1,0 +1,21 @@
+<section id="featured">
+    <h1 class="heading">{{product_heading}}</h1>
+
+    <div class="products">
+        {{#each product_arr}}
+        <div class="product-item">
+            <a href="product/{{this.product_id}}">
+                <div class="prod-image">
+                    <img src="../../static/images/oladimeji-odunsi-n5aE6hOY6do-unsplash.jpg" alt="">
+                </div>
+                <h3>{{this.product_name}}</h3>
+                <div class="prod-price">
+                    <h2>{{this.product_price}}</h2>
+                    <h4>{{this.product_rating}}</h4>
+                </div>
+                <a class="buy-now-link" href='{{this.product_id}}/add_cart'>BUY NOW</a>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+</section>

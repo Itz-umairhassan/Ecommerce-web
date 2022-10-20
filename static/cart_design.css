@@ -1,0 +1,78 @@
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+td{
+    padding:10px 0px;
+}
+#cart{
+    width: 90%;
+    padding-top: 19vh;
+    text-align: center;  
+}
+.cart-holder,.cart-payment h3{
+    display: flex;
+    justify-content: space-between;
+}
+.head{
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+.cart-table{
+    flex-basis: 65%;
+}
+.cart-payment{
+    flex-basis: 30%;
+}
+.cart-payment h2{
+    border:2px solid black;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+.cart-payment h3{
+   padding:10px 0px;
+   font-weight: 400;
+}
+
+.cart-image{
+    margin-right: 5px;
+    height: 80px;
+    width: 80px;
+    background-color: aquamarine;
+}
+.cart-image>img{
+    height: 100%;
+}
+.cart-prod{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: left;
+}
+.prod-data h4,.prod-data h5{
+    font-weight: 400;
+}
+
+/*------ MAKING DESIGN FOR PAYMENT LAYER ------------*/
+/*-------------------------------------------------------------------*/
+
+@media screen and (max-width:600px){
+    .cart-payment h3{
+        font-size: 0.9rem;
+    }
+    .cart-holder{
+        flex-direction: column;
+    }
+    tr h3{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:350px){
+    .cart-prod{
+        flex-direction: column;
+    }
+}

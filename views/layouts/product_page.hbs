@@ -1,0 +1,25 @@
+{{>above_header}}
+<section id="product">
+    <div class="prod-row">
+        <div id="prod-image" class="column">
+            <img src="../../static/images/averie-woodard-4nulm-JUYFo-unsplash.jpg" alt="">
+        </div>
+        <div class="prod-info column">
+            <h2 class="above-margin">{{required.product_name}}</h2>
+            <h2 class="above-margin"><span style="color: #2E8B57;">'${{required.product_price}}.00'
+                </span> <span style="font-weight: 400;">{{required.product_rating}}</span></h2>
+            <h2 class="above-margin">Description </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur cumque modi tempora laboriosam
+                quasi inventore culpa adipisci delectus rerum ab?</p>
+            <form id="buying-form" action='{{required.product_id}}/purchase'  method="post">
+                <input name="quantity" type="number" value="1">
+                <a href="" id="Buy-button" class="cart-button">Buy Now</a>
+            </form>
+
+
+        </div>
+    </div>
+</section>
+{{>featured}}
+{{>footer}}

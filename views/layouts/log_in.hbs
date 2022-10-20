@@ -1,0 +1,18 @@
+{{>header}}
+            <h1>Log In</h1>
+            <form id="myform" action="/login_form" method="post">
+               {{>form_item}}
+                <div class="form-item">
+                    <a id="Submit-link" href="">Log In</a>
+                 </div>
+                 <div class="form-item ">
+                    <h4 style="color: red;" class="error">{{error_message}}</h4>
+                 </div>
+                <div class="form-item">
+                    <span>Not already registered ? </span>
+                    <a class="sign" href="/SignUp">Sign Up</a>
+                </div>
+                
+            </form>
+            {{>script}}
+        

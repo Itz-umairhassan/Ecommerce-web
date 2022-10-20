@@ -1,0 +1,22 @@
+{{>header}}
+<h1>Sign Up</h1>
+<form id="myform" action="/signup_form" method="post">
+   
+    <div class="form-item in">
+        <input type="text" name="userName" id="userName">
+        <label for="userName">Username</label>
+    </div>
+ {{>form_item}}
+    <div class="form-item">
+        <a id="Submit-link" href="">Sign Up</a>
+    </div>
+    <div class="form-item ">
+        <h4 style="color: red;" class="error">{{error_message}}</h4>
+    </div>
+    <div class="form-item">
+        <span> already registered ? </span>
+        <a class="sign" href="logIn">Log In</a>
+    </div>
+
+</form>
+{{>script}}

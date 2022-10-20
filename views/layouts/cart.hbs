@@ -1,0 +1,56 @@
+{{>above_header}}
+<section id="cart">
+    <h1 class="heading">Cart Details</h1>
+    <div class="cart-holder">
+        <div class="cart-table">
+            <table>
+                <thead>
+                    <tr class="head">
+                        <th>
+                            <h3>Name</h3>
+                        </th>
+                        <th>
+                            <h3>Quantity</h3>
+                        </th>
+                        <th>
+                            <h3>Price</h3>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each products}}
+                    <tr>
+                        <td class="cart-prod">
+                            <div class="cart-image">
+                                <img src="../../static/images/oladimeji-odunsi-n5aE6hOY6do-unsplash.jpg" alt="">
+                            </div>
+                            <div class="prod-data">
+                                <h4>{{this.product_name}}</h4>
+                                <a href="cart/{{this.product_id}}/{{this.quant}}/remove">
+                                    <h5 style="color: red;">remove<h5>
+                                </a>
+                                <h4>${{this.product_price}}</h4>
+                            </div>
+                        </td>
+                        <td>{{this.quant}}</td>
+                        <td>${{this.price_of_product}}</td>
+                    </tr>
+                    {{/each}}
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="cart-payment">
+            <h2>Payment</h2>
+            <h3><span>Total</span> <span> ${{price.price_v}}</span></h3>
+            <h3><span>Tax</span> <span>${{price.tax_v}}</span></h3>
+            <h3><span>Sub Total</span> <span>${{price.total}}</span></h3>
+
+            <a class="checkout-link" href="">CHECKOUT</a>
+        </div>
+    </div>
+
+</section>
+{{>featured}}
+{{>footer}}
